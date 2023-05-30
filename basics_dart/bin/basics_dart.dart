@@ -1,5 +1,5 @@
 void main() {
-  print("hello world");
+  // print("hello world");
   // var a = stdin.readLineSync();
   // print(a);
   // stdout.write('hello $a');
