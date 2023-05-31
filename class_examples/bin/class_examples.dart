@@ -1,5 +1,10 @@
-import 'package:class_examples/class_examples.dart' as class_examples;
+import 'person.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${class_examples.calculate()}!');
+  final person = Person("arun", 25);
+  // person.name = "another name";
+  person.setAge = 20;
+  print(person.helloAge);
+
+  // final person = Person.ageAbove50('Manikandan', 52);
 }
