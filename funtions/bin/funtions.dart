@@ -7,6 +7,8 @@ void main() {
   sumFunction(20, 25, (int a) {
     print('A=$a');
   }, printB);
+  sumAfterFuture();
+  print('after Future');
 }
 
 void printA(int a) {
@@ -27,6 +29,17 @@ void sum1(int a, int b) {
 
 int sumReturn(int a, int b) {
   return a + b;
+}
+
+Future<int> sumFuture(int a, int b) async {
+  await Future.delayed(Duration(seconds: 3));
+  print('sum Future ${a + b}');
+  return a + b;
+}
+
+Future<void> sumAfterFuture() async {
+  await sumFuture(33, 44);
+  print('in just sum');
 }
 
 void sumReq({required int a, required int b, int c = 0}) {
